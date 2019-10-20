@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.artemanufrij.playmymusic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 10:59+0200\n"
+"POT-Creation-Date: 2019-10-21 00:51+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,12 +227,12 @@ msgstr ""
 msgid "New Playlist"
 msgstr ""
 
-#: src/Services/LibraryManager.vala:350 src/Services/LibraryManager.vala:446
+#: src/Services/LibraryManager.vala:350 src/Services/LibraryManager.vala:454
 msgid "Choose an image…"
 msgstr ""
 
-#: src/Services/LibraryManager.vala:352 src/Services/LibraryManager.vala:448
-#: src/Services/LibraryManager.vala:490 src/Services/LibraryManager.vala:511
+#: src/Services/LibraryManager.vala:352 src/Services/LibraryManager.vala:456
+#: src/Services/LibraryManager.vala:498 src/Services/LibraryManager.vala:519
 msgid "_Cancel"
 msgstr ""
 
@@ -240,28 +240,28 @@ msgstr ""
 msgid "_Save"
 msgstr ""
 
-#: src/Services/LibraryManager.vala:356 src/Services/LibraryManager.vala:494
+#: src/Services/LibraryManager.vala:356 src/Services/LibraryManager.vala:502
 msgid "Playlist (.m3u)"
 msgstr ""
 
-#: src/Services/LibraryManager.vala:449 src/Services/LibraryManager.vala:491
-#: src/Services/LibraryManager.vala:512
+#: src/Services/LibraryManager.vala:457 src/Services/LibraryManager.vala:499
+#: src/Services/LibraryManager.vala:520
 msgid "_Open"
 msgstr ""
 
-#: src/Services/LibraryManager.vala:452
+#: src/Services/LibraryManager.vala:460
 msgid "Images"
 msgstr ""
 
-#: src/Services/LibraryManager.vala:488
+#: src/Services/LibraryManager.vala:496
 msgid "Choose a playlist…"
 msgstr ""
 
-#: src/Services/LibraryManager.vala:510
+#: src/Services/LibraryManager.vala:518
 msgid "Select a folder."
 msgstr ""
 
-#: src/Services/LibraryManager.vala:515
+#: src/Services/LibraryManager.vala:523
 msgid "Folder"
 msgstr ""
 

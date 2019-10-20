@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.artemanufrij.playmymusic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 10:59+0200\n"
-"PO-Revision-Date: 2019-04-14 17:24+0200\n"
+"POT-Creation-Date: 2019-10-21 00:51+0400\n"
+"PO-Revision-Date: 2019-10-21 00:56+0400\n"
 "Last-Translator: Andrey Kultyapov <camellan@yandex.ru>\n"
 "Language-Team: none\n"
 "Language: ru\n"
@@ -17,10 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: src/MainWindow.vala:110
 msgid "Synchronizing library"
-msgstr ""
+msgstr "Синхронизация медиатеки"
 
 #: src/MainWindow.vala:136
 msgid "Pause"
@@ -52,11 +53,11 @@ msgstr "Следующий"
 
 #: src/MainWindow.vala:415 src/MainWindow.vala:1015
 msgid "Shuffle On"
-msgstr ""
+msgstr "Перемешивание включено"
 
 #: src/MainWindow.vala:418 src/MainWindow.vala:1018
 msgid "Shuffle Off"
-msgstr ""
+msgstr "Перемешивание выключено"
 
 #: src/MainWindow.vala:452
 msgid "Albums"
@@ -84,7 +85,7 @@ msgstr "Аудио CD"
 
 #: src/MainWindow.vala:538
 msgid "Menu"
-msgstr ""
+msgstr "Меню"
 
 #: src/MainWindow.vala:544
 msgid "Change Music Folder…"
@@ -104,19 +105,19 @@ msgstr "Пересканировать медиатеку"
 
 #: src/MainWindow.vala:572
 msgid "Sort by"
-msgstr ""
+msgstr "Сортировать как"
 
 #: src/MainWindow.vala:575
 msgid "Artist - Year - Album"
-msgstr ""
+msgstr "Исполнитель - Год - Альбом"
 
 #: src/MainWindow.vala:576
 msgid "Album - Artist"
-msgstr ""
+msgstr "Альбом - Исполнитель"
 
 #: src/MainWindow.vala:577
 msgid "Artist - Album"
-msgstr ""
+msgstr "Исполнитель - Альбом"
 
 #: src/MainWindow.vala:600 src/Dialogs/Preferences.vala:54
 msgid "Preferences"
@@ -124,11 +125,11 @@ msgstr "Параметры"
 
 #: src/MainWindow.vala:634
 msgid "Light background"
-msgstr ""
+msgstr "Светлая тема"
 
 #: src/MainWindow.vala:635
 msgid "Dark background"
-msgstr ""
+msgstr "Тёмная тема"
 
 #: src/MainWindow.vala:646
 msgid "Search Music"
@@ -146,15 +147,15 @@ msgstr "<b>%s</b> от <b>%s</b>"
 
 #: src/MainWindow.vala:998
 msgid "Repeat All"
-msgstr ""
+msgstr "Повторять все"
 
 #: src/MainWindow.vala:1002
 msgid "Repeat One"
-msgstr ""
+msgstr "Повторять один"
 
 #: src/MainWindow.vala:1006
 msgid "Repeat Off"
-msgstr ""
+msgstr "Повтор выключен"
 
 #: src/Dialogs/AlbumEditor.vala:83 src/Dialogs/ArtistEditor.vala:82
 #: src/Widgets/Views/RadiosView.vala:146
@@ -184,7 +185,7 @@ msgstr "Загружать данные исполнителя из MusicBrainz"
 
 #: src/Dialogs/Preferences.vala:101
 msgid "Save custom Covers in Library folder"
-msgstr "Сохранять пользовательские обложки в папку медиотеки"
+msgstr "Сохранять пользовательские обложки в папку медиатеки"
 
 #: src/Dialogs/Preferences.vala:103
 msgid "Save changes into ID3-Tag"
@@ -200,7 +201,7 @@ msgstr "Удалять плейлист, если последний трек б
 
 #: src/Dialogs/Preferences.vala:111
 msgid "Remember Track progress"
-msgstr ""
+msgstr "Запоминать позицию трека"
 
 #: src/Dialogs/Preferences.vala:116
 msgid "Close"
@@ -228,41 +229,41 @@ msgstr "удаление…"
 msgid "New Playlist"
 msgstr "Новый плейлист"
 
-#: src/Services/LibraryManager.vala:350 src/Services/LibraryManager.vala:446
+#: src/Services/LibraryManager.vala:350 src/Services/LibraryManager.vala:454
 msgid "Choose an image…"
 msgstr "Выбрать изображение…"
 
-#: src/Services/LibraryManager.vala:352 src/Services/LibraryManager.vala:448
-#: src/Services/LibraryManager.vala:490 src/Services/LibraryManager.vala:511
+#: src/Services/LibraryManager.vala:352 src/Services/LibraryManager.vala:456
+#: src/Services/LibraryManager.vala:498 src/Services/LibraryManager.vala:519
 msgid "_Cancel"
 msgstr "_Отмена"
 
 #: src/Services/LibraryManager.vala:353
 msgid "_Save"
-msgstr ""
+msgstr "_Сохранить"
 
-#: src/Services/LibraryManager.vala:356 src/Services/LibraryManager.vala:494
+#: src/Services/LibraryManager.vala:356 src/Services/LibraryManager.vala:502
 msgid "Playlist (.m3u)"
-msgstr ""
+msgstr "Плейлист (.m3u)"
 
-#: src/Services/LibraryManager.vala:449 src/Services/LibraryManager.vala:491
-#: src/Services/LibraryManager.vala:512
+#: src/Services/LibraryManager.vala:457 src/Services/LibraryManager.vala:499
+#: src/Services/LibraryManager.vala:520
 msgid "_Open"
 msgstr "_Открыть"
 
-#: src/Services/LibraryManager.vala:452
+#: src/Services/LibraryManager.vala:460
 msgid "Images"
 msgstr "Изображения"
 
-#: src/Services/LibraryManager.vala:488
+#: src/Services/LibraryManager.vala:496
 msgid "Choose a playlist…"
-msgstr ""
+msgstr "Выберите плейлист…"
 
-#: src/Services/LibraryManager.vala:510
+#: src/Services/LibraryManager.vala:518
 msgid "Select a folder."
 msgstr "Выбрать папку."
 
-#: src/Services/LibraryManager.vala:515
+#: src/Services/LibraryManager.vala:523
 msgid "Folder"
 msgstr "Папка"
 
@@ -302,7 +303,7 @@ msgstr "Редактировать параметры исполнителя…"
 #: src/Widgets/Playlist.vala:46
 #, c-format
 msgid "<small>%u Tracks</small>"
-msgstr ""
+msgstr "<small>%u Треков</small>"
 
 #: src/Widgets/Playlist.vala:134
 msgid "Rename"
@@ -318,7 +319,7 @@ msgstr "Удалить плейлист"
 
 #: src/Widgets/Playlist.vala:171
 msgid "Export Playlist…"
-msgstr ""
+msgstr "Экспортировать плейлист…"
 
 #: src/Widgets/Radio.vala:95
 msgid "Edit Radio Station…"
@@ -405,7 +406,7 @@ msgstr "<b>%d Дорожек</b> в <b>%d Альбом</b>(е/ах)"
 
 #: src/Widgets/Views/MobilePhone.vala:81
 msgid "Enable MTP on your mobile phone"
-msgstr ""
+msgstr "Включите MTP на вашем мобильном телефоне"
 
 #: src/Widgets/Views/MobilePhone.vala:108
 msgid "Hide Mobile Panel"
@@ -418,7 +419,7 @@ msgstr "Добавить плейлист"
 #: src/Widgets/Views/PlaylistsView.vala:104
 #: src/Widgets/Views/PlaylistsView.vala:141
 msgid "Import Playlist"
-msgstr ""
+msgstr "Импортировать плейлист"
 
 #: src/Widgets/Views/PlaylistsView.vala:119
 #: src/Widgets/Views/RadiosView.vala:229
@@ -443,7 +444,7 @@ msgstr "Добавьте плейлист для управления своим
 
 #: src/Widgets/Views/PlaylistsView.vala:141
 msgid "Import .m3u formated Playlist."
-msgstr ""
+msgstr "Импортируйте плейлист .m3u формата."
 
 #: src/Widgets/Views/Queue.vala:74
 msgid "Clear the Queue"
@@ -460,7 +461,7 @@ msgstr "Очередь из %s"
 
 #: src/Widgets/Views/Queue.vala:100
 msgid "Export Queue…"
-msgstr ""
+msgstr "Экспортировать очередь…"
 
 #: src/Widgets/Views/Queue.vala:118
 msgid "Queue is empty"
