@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2017-2018 Artem Anufrij <artem.anufrij@live.de>
+ * Copyright (c) 2017-2019 Artem Anufrij <artem.anufrij@live.de>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -109,6 +109,14 @@ namespace PlayMyMusic {
                     }
                 });
 
+            var action_quit = action_generator ("<Control>q", "quit");
+            action_quit.activate.connect (
+                () => {
+                    if (mainwindow != null) {
+                        mainwindow.destroy ();
+                    }
+                });
+
             create_cache_folders ();
         }
 
@@ -187,7 +195,7 @@ namespace PlayMyMusic {
             options [0] = { "next", 0, 0, OptionArg.NONE, ref next, "Play next track", null };
             options [1] = { "prev", 0, 0, OptionArg.NONE, ref prev, "Play previous track", null };
             options [2] = { "play", 0, 0, OptionArg.NONE, ref play, "Toggle playing", null };
-            options [3] = { "", 0, 0, OptionArg.STRING_ARRAY, ref arg_files, null, "[URI...]" };
+            options [3] = { "", 0, 0, OptionArg.STRING_ARRAY, ref arg_files, null, "[URI…]" };
             options [4] = { null };
 
             var opt_context = new OptionContext ("actions");

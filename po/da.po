@@ -1,200 +1,162 @@
+# Danish translations for com.github.artemanufrij.playmymusic package.
+# Copyright (C) 2019 THE com.github.artemanufrij.playmymusic'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.artemanufrij.playmymusic package.
+# Automatically generated, 2019.
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: com.github.artemanufrij.playmymusic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 18:18+0200\n"
+"POT-Creation-Date: 2019-04-15 10:59+0200\n"
+"PO-Revision-Date: 2019-04-14 17:24+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:7
-#: data/com.github.artemanufrij.playmymusic.desktop.in:3
-#: data/com.github.artemanufrij.playmymusic.desktop.in:4
-#: src/MainWindow.vala:152 src/MainWindow.vala:278
-msgid "Melody"
-msgstr "Melodi"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:8
-msgid ""
-"A music player for listening local music files, online radios and Audio CD's"
-msgstr ""
-"En musikafspiller til at lytte til lokale musikfiler, onlineradio og lyd "
-"CD'er"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:10
-msgid ""
-"A very fast music player designed extra for large local libraries which also "
-"supports online radios and downloading album covers"
-msgstr ""
-"En meget hurtig musikafspiller designet til ekstra store lokale biblioteker, "
-"som også understøtter online radio og download af album cover"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:11
-msgid "Features:"
-msgstr "Funktioner:"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:13
-#, fuzzy
-msgid "Show all Albums from your library"
-msgstr "Tilføj en playliste til dine yndlings sange."
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:14
-msgid "Group tracks by Artists"
-msgstr "Gruppér numre efter Kunstner"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:15
-#, fuzzy
-msgid "Manage your Playlists"
-msgstr "Håndtér dine Playlister"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:16
-msgid "Listen to online Radio"
-msgstr "Lyt til online Radio"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:17
-#, fuzzy
-msgid "Audio CD support"
-msgstr "Lyd CD"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:18
-msgid "Manage your MTP device"
-msgstr "Håndtér dit MTP apparat"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:19
-msgid "ID3-Tag support"
-msgstr "ID3-Tag understøttelse"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:30
-msgid "Artem Anufrij"
+#: src/MainWindow.vala:110
+msgid "Synchronizing library"
 msgstr ""
 
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:37
-#: src/MainWindow.vala:449
-msgid "Albums"
-msgstr "Albummer"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:41
-#: src/MainWindow.vala:453
-msgid "Artists"
-msgstr "Kunstnere"
-
-#: data/com.github.artemanufrij.playmymusic.appdata.xml.in:45
-#: src/MainWindow.vala:458
-#, fuzzy
-msgid "Tracks"
-msgstr "Spor %d"
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:5
-msgid "Listen your music"
-msgstr "Lyt til musik"
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:6
-msgid "music;radio;playlist;"
-msgstr "musik;radio;playlister;"
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:8
-msgid "com.github.artemanufrij.playmymusic"
-msgstr ""
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:18
-#, fuzzy
-msgid "Play/Pause"
-msgstr "Afspil/Pause"
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:20
-msgid "media-playback-start-symbolic"
-msgstr ""
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:23
-#: src/MainWindow.vala:394
-msgid "Next"
-msgstr "Næste"
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:25
-msgid "media-skip-forward-symbolic"
-msgstr ""
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:28
-#: src/MainWindow.vala:375
-msgid "Previous"
-msgstr "Forrige"
-
-#: data/com.github.artemanufrij.playmymusic.desktop.in:30
-msgid "media-skip-backward-symbolic"
-msgstr ""
-
-#: src/MainWindow.vala:132
+#: src/MainWindow.vala:136
 msgid "Pause"
 msgstr "Pause"
 
-#: src/MainWindow.vala:158 src/MainWindow.vala:385
+#: src/MainWindow.vala:156 src/MainWindow.vala:282
+msgid "Melody"
+msgstr "Melodi"
+
+#: src/MainWindow.vala:162 src/MainWindow.vala:388
 msgid "Play"
 msgstr "Afspil"
 
-#: src/MainWindow.vala:335
-#, fuzzy
+#: src/MainWindow.vala:338
 msgid "Loading…"
-msgstr "Indlæser…"
+msgstr ""
 
-#: src/MainWindow.vala:335
+#: src/MainWindow.vala:338
 msgid "Reading out database content"
 msgstr "Aflæser database indhold"
 
-#: src/MainWindow.vala:415
-msgid "Shuffle"
-msgstr "Bland"
+#: src/MainWindow.vala:378
+msgid "Previous"
+msgstr "Forrige"
 
-#: src/MainWindow.vala:427
-msgid "Repeat"
-msgstr "Gentag"
+#: src/MainWindow.vala:397
+msgid "Next"
+msgstr "Næste"
 
-#: src/MainWindow.vala:463
+#: src/MainWindow.vala:415 src/MainWindow.vala:1015
+msgid "Shuffle On"
+msgstr ""
+
+#: src/MainWindow.vala:418 src/MainWindow.vala:1018
+msgid "Shuffle Off"
+msgstr ""
+
+#: src/MainWindow.vala:452
+msgid "Albums"
+msgstr "Albummer"
+
+#: src/MainWindow.vala:456
+msgid "Artists"
+msgstr "Kunstnere"
+
+#: src/MainWindow.vala:461
+msgid "Tracks"
+msgstr ""
+
+#: src/MainWindow.vala:466
 msgid "Playlists"
 msgstr "Playlister"
 
-#: src/MainWindow.vala:468
+#: src/MainWindow.vala:471
 msgid "Radio Stations"
 msgstr "Radiostationer"
 
-#: src/MainWindow.vala:475
+#: src/MainWindow.vala:478
 msgid "Audio CD"
 msgstr "Lyd CD"
 
-#: src/MainWindow.vala:540
+#: src/MainWindow.vala:538
+msgid "Menu"
+msgstr ""
+
+#: src/MainWindow.vala:544
 msgid "Change Music Folder…"
 msgstr "Skift Musik Mappe…"
 
-#: src/MainWindow.vala:549
+#: src/MainWindow.vala:553
 msgid "Import Music…"
 msgstr "Importér Musik…"
 
-#: src/MainWindow.vala:557
+#: src/MainWindow.vala:561
 msgid "Reset all views"
 msgstr "Nulstil alle views"
 
-#: src/MainWindow.vala:563
-#, fuzzy
+#: src/MainWindow.vala:567
 msgid "Resync Library"
-msgstr "Genskan Biblioteket"
+msgstr ""
 
-#: src/MainWindow.vala:568 src/Dialogs/Preferences.vala:54
+#: src/MainWindow.vala:572
+msgid "Sort by"
+msgstr ""
+
+#: src/MainWindow.vala:575
+msgid "Artist - Year - Album"
+msgstr ""
+
+#: src/MainWindow.vala:576
+msgid "Album - Artist"
+msgstr ""
+
+#: src/MainWindow.vala:577
+msgid "Artist - Album"
+msgstr ""
+
+#: src/MainWindow.vala:600 src/Dialogs/Preferences.vala:54
 msgid "Preferences"
 msgstr "Indstillinger"
 
-#: src/MainWindow.vala:603
+#: src/MainWindow.vala:634
+msgid "Light background"
+msgstr ""
+
+#: src/MainWindow.vala:635
+msgid "Dark background"
+msgstr ""
+
+#: src/MainWindow.vala:646
 msgid "Search Music"
 msgstr "Søg i Musik"
 
-#: src/MainWindow.vala:652
+#: src/MainWindow.vala:696
 msgid "Queue"
 msgstr "Kø"
 
-#: src/MainWindow.vala:762 src/MainWindow.vala:770
+#: src/MainWindow.vala:806 src/MainWindow.vala:814
 #: src/Widgets/Views/TracksView.vala:435
 #, c-format
 msgid "<b>%s</b> by <b>%s</b>"
 msgstr "<b>%s</b> af <b>%s</b>"
 
+#: src/MainWindow.vala:998
+msgid "Repeat All"
+msgstr ""
+
+#: src/MainWindow.vala:1002
+msgid "Repeat One"
+msgstr ""
+
+#: src/MainWindow.vala:1006
+msgid "Repeat Off"
+msgstr ""
+
 #: src/Dialogs/AlbumEditor.vala:83 src/Dialogs/ArtistEditor.vala:82
-#: src/Widgets/Views/RadiosView.vala:153
+#: src/Widgets/Views/RadiosView.vala:146
 msgid "Click to choose a new cover…"
 msgstr "Klik for at vælge et nyt cover…"
 
@@ -203,41 +165,43 @@ msgid "Year"
 msgstr "År"
 
 #: src/Dialogs/AlbumEditor.vala:121 src/Dialogs/ArtistEditor.vala:114
-#: src/Widgets/Views/RadiosView.vala:251
+#: src/Widgets/Views/RadiosView.vala:231
 msgid "Save"
 msgstr "Gem"
 
-#: src/Dialogs/Preferences.vala:90
+#: src/Dialogs/Preferences.vala:94
 msgid "Play in background if closed"
 msgstr "Afspil i baggrund hvis lukket"
 
-#: src/Dialogs/Preferences.vala:92
-#, fuzzy
+#: src/Dialogs/Preferences.vala:96
 msgid "Sync files on start up"
-msgstr "Kig efter nye filer ved opstart"
+msgstr ""
 
-#: src/Dialogs/Preferences.vala:95
-#, fuzzy
+#: src/Dialogs/Preferences.vala:99
 msgid "Load Content from MusicBrainz"
-msgstr "Indlæs Kunstner data fra MusicBrainz"
+msgstr ""
 
-#: src/Dialogs/Preferences.vala:97
+#: src/Dialogs/Preferences.vala:101
 msgid "Save custom Covers in Library folder"
 msgstr "Gem egne Covers i Biblioteks mappen"
 
-#: src/Dialogs/Preferences.vala:99
+#: src/Dialogs/Preferences.vala:103
 msgid "Save changes into ID3-Tag"
 msgstr "Gem ændringer i ID3-Tag"
 
-#: src/Dialogs/Preferences.vala:102
+#: src/Dialogs/Preferences.vala:106
 msgid "Copy Imported Files into Library"
 msgstr "Kopiér importerede filer til Bibliotek"
 
-#: src/Dialogs/Preferences.vala:104
+#: src/Dialogs/Preferences.vala:108
 msgid "Remove Playlist if last Track was removed"
 msgstr "Fjern Playliste hvis sidste nummer blev fjernet"
 
-#: src/Dialogs/Preferences.vala:109
+#: src/Dialogs/Preferences.vala:111
+msgid "Remember Track progress"
+msgstr ""
+
+#: src/Dialogs/Preferences.vala:116
 msgid "Close"
 msgstr "Luk"
 
@@ -259,31 +223,45 @@ msgstr "Ingen Musik Filer fundet"
 msgid "deleting…"
 msgstr "sletter…"
 
-#: src/Services/LibraryManager.vala:332
+#: src/Services/LibraryManager.vala:318
 msgid "New Playlist"
 msgstr "Ny Playliste"
 
-#: src/Services/LibraryManager.vala:390
+#: src/Services/LibraryManager.vala:350 src/Services/LibraryManager.vala:446
 msgid "Choose an image…"
-msgstr "Vælg et billede..."
+msgstr "Vælg et billede…"
 
-#: src/Services/LibraryManager.vala:392 src/Services/LibraryManager.vala:413
+#: src/Services/LibraryManager.vala:352 src/Services/LibraryManager.vala:448
+#: src/Services/LibraryManager.vala:490 src/Services/LibraryManager.vala:511
 msgid "_Cancel"
 msgstr "_Anullér"
 
-#: src/Services/LibraryManager.vala:393 src/Services/LibraryManager.vala:414
+#: src/Services/LibraryManager.vala:353
+msgid "_Save"
+msgstr ""
+
+#: src/Services/LibraryManager.vala:356 src/Services/LibraryManager.vala:494
+msgid "Playlist (.m3u)"
+msgstr ""
+
+#: src/Services/LibraryManager.vala:449 src/Services/LibraryManager.vala:491
+#: src/Services/LibraryManager.vala:512
 msgid "_Open"
 msgstr "_Åben"
 
-#: src/Services/LibraryManager.vala:396
+#: src/Services/LibraryManager.vala:452
 msgid "Images"
 msgstr "Billeder"
 
-#: src/Services/LibraryManager.vala:412
+#: src/Services/LibraryManager.vala:488
+msgid "Choose a playlist…"
+msgstr ""
+
+#: src/Services/LibraryManager.vala:510
 msgid "Select a folder."
 msgstr "Vælg en mappe."
 
-#: src/Services/LibraryManager.vala:417
+#: src/Services/LibraryManager.vala:515
 msgid "Folder"
 msgstr "Mappe"
 
@@ -320,18 +298,26 @@ msgstr "Flet %u valgte Albummer"
 msgid "Edit Artist properties…"
 msgstr "Redigér Kunstner egenskaber…"
 
-#: src/Widgets/Playlist.vala:107
+#: src/Widgets/Playlist.vala:46
+#, c-format
+msgid "<small>%u Tracks</small>"
+msgstr ""
+
+#: src/Widgets/Playlist.vala:134
 msgid "Rename"
 msgstr "Omdøb"
 
-#. CONTEXT MENU REGION
-#: src/Widgets/Playlist.vala:128
+#: src/Widgets/Playlist.vala:155
 msgid "Rename Playlist"
 msgstr "Omdøb Playliste"
 
-#: src/Widgets/Playlist.vala:138
+#: src/Widgets/Playlist.vala:163
 msgid "Remove Playlist"
 msgstr "Fjern Playliste"
+
+#: src/Widgets/Playlist.vala:171
+msgid "Export Playlist…"
+msgstr "Ingen Playlister"
 
 #: src/Widgets/Radio.vala:95
 msgid "Edit Radio Station…"
@@ -359,56 +345,53 @@ msgid "Remove from Playlist"
 msgstr "Fjern fra Playliste"
 
 #: src/Widgets/Track.vala:236
-#, fuzzy
 msgid "Remove from Queue"
-msgstr "Fjern fra Playliste"
+msgstr ""
 
 #: src/Widgets/TrackTimeLine.vala:95 src/Widgets/TrackTimeLine.vala:99
 #, c-format
 msgid "<b>%s</b> from <b>%s</b> by <b>%s</b>"
 msgstr "<b>%s</b> fra <b>%s</b> af <b>%s</b>"
 
-#: src/Widgets/Views/AlbumsView.vala:119
+#: src/Widgets/Views/AlbumsView.vala:122
 msgid "Get Some Tunes"
 msgstr "Find noget Musik"
 
-#: src/Widgets/Views/AlbumsView.vala:119
-#, fuzzy
+#: src/Widgets/Views/AlbumsView.vala:122
 msgid "Add music to your library."
-msgstr "Tilføj musik fra en kilde til dit bibliotek."
+msgstr ""
 
-#: src/Widgets/Views/AlbumsView.vala:120
+#: src/Widgets/Views/AlbumsView.vala:123
 msgid "Change Music Folder"
 msgstr "Skift Musik Mappe"
 
-#: src/Widgets/Views/AlbumsView.vala:120
+#: src/Widgets/Views/AlbumsView.vala:123
 msgid "Load music from a folder, a network or an external disk."
 msgstr "Indlæs musik fra en mappe, et netværk eller en ekstern disk."
 
-#: src/Widgets/Views/AlbumsView.vala:121
+#: src/Widgets/Views/AlbumsView.vala:124
 msgid "Import Music"
 msgstr "Importér Musik"
 
-#: src/Widgets/Views/AlbumsView.vala:121
+#: src/Widgets/Views/AlbumsView.vala:124
 msgid "Import music from a source into your library."
 msgstr "Importér musik fra en kilde til dit bibliotek."
 
-#: src/Widgets/Views/AlbumsView.vala:140 src/Widgets/Views/ArtistsView.vala:110
-#: src/Widgets/Views/PlaylistsView.vala:148
-#: src/Widgets/Views/RadiosView.vala:213
+#: src/Widgets/Views/AlbumsView.vala:143 src/Widgets/Views/ArtistsView.vala:110
+#: src/Widgets/Views/PlaylistsView.vala:159
+#: src/Widgets/Views/RadiosView.vala:194
 msgid "No results"
 msgstr "Ingen resultater"
 
-#: src/Widgets/Views/AlbumsView.vala:140 src/Widgets/Views/ArtistsView.vala:110
-#: src/Widgets/Views/PlaylistsView.vala:148
-#: src/Widgets/Views/RadiosView.vala:213
+#: src/Widgets/Views/AlbumsView.vala:143 src/Widgets/Views/ArtistsView.vala:110
+#: src/Widgets/Views/PlaylistsView.vala:159
+#: src/Widgets/Views/RadiosView.vala:194
 msgid "Try another search"
 msgstr "Prøv en anden søgning"
 
 #: src/Widgets/Views/ArtistView.vala:110
-#, fuzzy
 msgid "Choose an Artist"
-msgstr "Vælg et Coverbillede"
+msgstr ""
 
 #: src/Widgets/Views/ArtistView.vala:110
 msgid "No Artist selected"
@@ -419,6 +402,10 @@ msgstr "Ingen Kunstner valgt"
 msgid "<b>%d Tracks</b> in <b>%d Album</b>(s)"
 msgstr "<b>%d Numre</b> i <b>%d Album</b>(s)"
 
+#: src/Widgets/Views/MobilePhone.vala:81
+msgid "Enable MTP on your mobile phone"
+msgstr ""
+
 #: src/Widgets/Views/MobilePhone.vala:108
 msgid "Hide Mobile Panel"
 msgstr "Gem Mobil panel"
@@ -427,81 +414,85 @@ msgstr "Gem Mobil panel"
 msgid "Add a playlist"
 msgstr "Tilføj en playliste"
 
-#: src/Widgets/Views/PlaylistsView.vala:112
-#: src/Widgets/Views/RadiosView.vala:249
+#: src/Widgets/Views/PlaylistsView.vala:104
+#: src/Widgets/Views/PlaylistsView.vala:141
+msgid "Import Playlist"
+msgstr ""
+
+#: src/Widgets/Views/PlaylistsView.vala:119
+#: src/Widgets/Views/RadiosView.vala:229
 msgid "Add"
 msgstr "Tilføj"
 
-#: src/Widgets/Views/PlaylistsView.vala:132
-#, fuzzy
+#: src/Widgets/Views/PlaylistsView.vala:139
 msgid "No Playlists"
-msgstr "Ingen Playlister"
+msgstr ""
 
-#: src/Widgets/Views/PlaylistsView.vala:132
-#, fuzzy
+#: src/Widgets/Views/PlaylistsView.vala:139
 msgid "Add playlist to your library."
-msgstr "Tilføj en playliste til dine yndlings sange."
+msgstr ""
 
-#: src/Widgets/Views/PlaylistsView.vala:133
-#, fuzzy
+#: src/Widgets/Views/PlaylistsView.vala:140
 msgid "Create Playlist"
-msgstr "Opret Ny Playliste"
+msgstr ""
 
-#: src/Widgets/Views/PlaylistsView.vala:133
-#, fuzzy
+#: src/Widgets/Views/PlaylistsView.vala:140
 msgid "Create a playlist for manage your favorite songs."
-msgstr "Tilføj en playliste til dine yndlings sange."
+msgstr ""
 
-#: src/Widgets/Views/Queue.vala:73
+#: src/Widgets/Views/PlaylistsView.vala:141
+msgid "Import .m3u formated Playlist."
+msgstr ""
+
+#: src/Widgets/Views/Queue.vala:74
 msgid "Clear the Queue"
 msgstr "Tøm Køen"
 
-#: src/Widgets/Views/Queue.vala:83
-#, fuzzy
+#: src/Widgets/Views/Queue.vala:84
 msgid "Create new Playlist based on this Queue"
-msgstr "Opret Ny Playliste"
+msgstr ""
 
-#: src/Widgets/Views/Queue.vala:88
+#: src/Widgets/Views/Queue.vala:89 src/Widgets/Views/Queue.vala:104
 #, c-format
 msgid "Queue from %s"
 msgstr "Kø fra %s"
 
-#: src/Widgets/Views/Queue.vala:107
+#: src/Widgets/Views/Queue.vala:100
+msgid "Export Queue…"
+msgstr ""
+
+#: src/Widgets/Views/Queue.vala:118
 msgid "Queue is empty"
 msgstr "Køen er tom"
 
-#: src/Widgets/Views/RadiosView.vala:113
+#: src/Widgets/Views/RadiosView.vala:110
 msgid "Add a radio station"
 msgstr "Tilføj en radiostation"
 
-#: src/Widgets/Views/RadiosView.vala:123
+#: src/Widgets/Views/RadiosView.vala:120
 msgid "Station Name"
 msgstr "Stationsnavn"
 
-#: src/Widgets/Views/RadiosView.vala:131
+#: src/Widgets/Views/RadiosView.vala:127
 msgid "URL"
 msgstr ""
 
-#. NEW STATION POPOVER END
-#: src/Widgets/Views/RadiosView.vala:195
-#, fuzzy
+#: src/Widgets/Views/RadiosView.vala:177
 msgid "No Radio Stations"
-msgstr "Ingen Radiostationer"
+msgstr ""
 
-#: src/Widgets/Views/RadiosView.vala:195
-#, fuzzy
+#: src/Widgets/Views/RadiosView.vala:177
 msgid "Add radio stations to your library."
-msgstr "Tilføj en radiostation"
+msgstr ""
 
-#: src/Widgets/Views/RadiosView.vala:196
+#: src/Widgets/Views/RadiosView.vala:178
 msgid "Add Radio Station"
 msgstr "Tilføj Radio Station"
 
-#: src/Widgets/Views/RadiosView.vala:196
+#: src/Widgets/Views/RadiosView.vala:178
 msgid "Add a Stream URL like .pls or .m3u."
 msgstr "Tilføj en Stream URL såsom .pls eller .m3u."
 
-#. FOR CONTEXT MENU
 #: src/Widgets/Views/TracksView.vala:56 src/Widgets/Views/TracksView.vala:186
 msgid "Nr"
 msgstr ""
@@ -511,23 +502,20 @@ msgid "Title"
 msgstr "Titel"
 
 #: src/Widgets/Views/TracksView.vala:56 src/Widgets/Views/TracksView.vala:200
-#, fuzzy
 msgid "Album"
-msgstr "Albummer"
+msgstr ""
 
 #: src/Widgets/Views/TracksView.vala:56 src/Widgets/Views/TracksView.vala:202
-#, fuzzy
 msgid "Artist"
-msgstr "Kunstnere"
+msgstr ""
 
 #: src/Widgets/Views/TracksView.vala:56 src/Widgets/Views/TracksView.vala:207
 msgid "Duration"
 msgstr "Varighed"
 
 #: src/Widgets/Views/TracksView.vala:165
-#, fuzzy
 msgid "Choose a Track"
-msgstr "Vælg et Nummer"
+msgstr ""
 
 #: src/Widgets/Views/TracksView.vala:165
 msgid "No track selected"
@@ -540,15 +528,3 @@ msgstr "Søjle Synlighed"
 #: src/Widgets/Views/TracksView.vala:384
 msgid "You can't hide all columns"
 msgstr "Du kan ikke skjule alle søjler"
-
-#~ msgid "Use Dark Theme"
-#~ msgstr "Brug Mørkt Tema"
-
-#~ msgid "Choose a Cover"
-#~ msgstr "Vælg et Coverbillede"
-
-#~ msgid "Add Playlist"
-#~ msgstr "Tilføj Playliste"
-
-#~ msgid "Play My Music"
-#~ msgstr "Afspil Min Musik"

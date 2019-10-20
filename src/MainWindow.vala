@@ -27,8 +27,8 @@
 
 namespace PlayMyMusic {
     public class MainWindow : Gtk.Window {
-        PlayMyMusic.Services.LibraryManager library_manager;
-        PlayMyMusic.Settings settings;
+        Services.LibraryManager library_manager;
+        Settings settings;
 
         public signal void ctrl_press ();
         public signal void ctrl_release ();
@@ -42,6 +42,9 @@ namespace PlayMyMusic {
         Gtk.Button previous_button;
         Gtk.MenuItem menu_item_resync;
         Gtk.MenuItem menu_item_reset;
+        Gtk.CheckMenuItem menu_sort_1;
+        Gtk.CheckMenuItem menu_sort_2;
+        Gtk.CheckMenuItem menu_sort_3;
         Gtk.Image icon_play;
         Gtk.Image icon_pause;
         public Gtk.Stack content;
@@ -85,7 +88,7 @@ namespace PlayMyMusic {
         };
 
         construct {
-            settings = PlayMyMusic.Settings.get_default ();
+            settings = Settings.get_default ();
             settings.notify["use-dark-theme"].connect (() => {
                 Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = settings.use_dark_theme;
             });
@@ -93,17 +96,18 @@ namespace PlayMyMusic {
                 set_repeat_symbol ();
             });
             settings.notify["shuffle-mode"].connect (() => {
-                if (settings.shuffle_mode) {
-                    shuffle_button.set_image (icon_shuffle_on);
-                } else {
-                    shuffle_button.set_image (icon_shuffle_off);
-                }
-                repeat_button.show_all ();
+                set_shuffle_symbol ();
             });
-            library_manager = PlayMyMusic.Services.LibraryManager.instance;
+            settings.notify["sort-mode-album-view"].connect (() => {
+                set_sort_mode_album_view ();
+            });
+            library_manager = Services.LibraryManager.instance;
             library_manager.sync_started.connect (() => {
                 Idle.add (() => {
+                    headerbar.pack_end (spinner);
                     spinner.active = true;
+                    spinner.show ();
+                    spinner.tooltip_text = _ ("Synchronizing library");
                     menu_item_resync.sensitive = false;
                     menu_item_reset.sensitive = false;
                     return false;
@@ -112,19 +116,19 @@ namespace PlayMyMusic {
             library_manager.sync_finished.connect (() => {
                 Idle.add (() => {
                     spinner.active = false;
+                    headerbar.remove (spinner);
                     menu_item_resync.sensitive = true;
                     menu_item_reset.sensitive = true;
                     return false;
                 });
             });
-            library_manager.added_new_artist.connect (
-                () => {
-                    if (!artist_button.sensitive) {
-                        artist_button.sensitive = true;
-                        playlist_button.sensitive = true;
-                        tracks_button.sensitive = true;
-                    }
-                });
+            library_manager.added_new_artist.connect (() => {
+                if (!artist_button.sensitive) {
+                    artist_button.sensitive = true;
+                    playlist_button.sensitive = true;
+                    tracks_button.sensitive = true;
+                }
+            });
             library_manager.player_state_changed.connect ((state) => {
                 play_button.sensitive = true;
                 if (state == Gst.State.PLAYING) {
@@ -298,7 +302,6 @@ namespace PlayMyMusic {
 
             // SPINNER
             spinner = new Gtk.Spinner ();
-            headerbar.pack_end (spinner);
 
             // TOAST
             toast = new Granite.Widgets.Toast ("");
@@ -409,10 +412,11 @@ namespace PlayMyMusic {
             shuffle_button = new Gtk.Button ();
             if (settings.shuffle_mode) {
                 shuffle_button.set_image (icon_shuffle_on);
+                shuffle_button.tooltip_text = _ ("Shuffle On");
             } else {
                 shuffle_button.set_image (icon_shuffle_off);
+                shuffle_button.tooltip_text = _ ("Shuffle Off");
             }
-            shuffle_button.tooltip_text = _ ("Shuffle");
             shuffle_button.can_focus = false;
             shuffle_button.clicked.connect (() => {
                 settings.shuffle_mode = !settings.shuffle_mode;
@@ -424,7 +428,6 @@ namespace PlayMyMusic {
 
             repeat_button = new Gtk.Button ();
             set_repeat_symbol ();
-            repeat_button.tooltip_text = _ ("Repeat");
             repeat_button.can_focus = false;
             repeat_button.clicked.connect (() => {
                 settings.switch_repeat_mode ();
@@ -532,6 +535,7 @@ namespace PlayMyMusic {
 
         private void header_build_app_menu () {
             var app_menu = new Gtk.MenuButton ();
+            app_menu.tooltip_text = _ ("Menu");
             app_menu.valign = Gtk.Align.CENTER;
             app_menu.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.LARGE_TOOLBAR));
 
@@ -565,6 +569,34 @@ namespace PlayMyMusic {
                 library_manager.sync_library_content.begin ();
             });
 
+            var menu_sort = new Gtk.MenuItem.with_label (_ ("Sort by"));
+            var menu_sort_sub = new Gtk.Menu ();
+            menu_sort.set_submenu (menu_sort_sub);
+            menu_sort_1 = new Gtk.CheckMenuItem.with_label (_ ("Artist - Year - Album"));
+            menu_sort_2 = new Gtk.CheckMenuItem.with_label (_ ("Album - Artist"));
+            menu_sort_3 = new Gtk.CheckMenuItem.with_label (_ ("Artist - Album"));
+            set_sort_mode_album_view ();
+
+            menu_sort_1.toggled.connect (() => {
+                if (menu_sort_1.active) {
+                    settings.sort_mode_album_view = 1;
+                }
+            });
+            menu_sort_2.toggled.connect (() => {
+                if (menu_sort_2.active) {
+                    settings.sort_mode_album_view = 2;
+                }
+            });
+            menu_sort_3.toggled.connect (() => {
+                if (menu_sort_3.active) {
+                    settings.sort_mode_album_view = 3;
+                }
+            });
+
+            menu_sort_sub.add (menu_sort_1);
+            menu_sort_sub.add (menu_sort_2);
+            menu_sort_sub.add (menu_sort_3);
+
             var menu_item_preferences = new Gtk.MenuItem.with_label (_ ("Preferences"));
             menu_item_preferences.activate.connect (() => {
                 var preferences = new Dialogs.Preferences (this);
@@ -577,9 +609,18 @@ namespace PlayMyMusic {
             settings_menu.append (menu_item_resync);
             settings_menu.append (menu_item_reset);
             settings_menu.append (new Gtk.SeparatorMenuItem ());
+            settings_menu.append (menu_sort);
+            settings_menu.append (new Gtk.SeparatorMenuItem ());
             settings_menu.append (menu_item_preferences);
             settings_menu.show_all ();
 
+            app_menu.clicked.connect (() => {
+                if (content.visible_child_name == "albums") {
+                    menu_sort.show ();
+                } else {
+                    menu_sort.hide ();
+                }
+            });
             app_menu.popup = settings_menu;
             headerbar.pack_end (app_menu);
         }
@@ -590,6 +631,8 @@ namespace PlayMyMusic {
             }
 
             var mode_switch = new Granite.ModeSwitch.from_icon_name ("display-brightness-symbolic", "weather-clear-night-symbolic");
+            mode_switch.primary_icon_tooltip_text = _ ("Light background");
+            mode_switch.secondary_icon_tooltip_text = _ ("Dark background");
             mode_switch.valign = Gtk.Align.CENTER;
             mode_switch.active = settings.use_dark_theme;
             mode_switch.notify["active"].connect (() => {
@@ -643,13 +686,14 @@ namespace PlayMyMusic {
                 }
             });
             queue.moved_to_playlist.connect (() => {
-                show_playlists ();
+                // CHOOSE PLAYLIST VIEW
+                view_mode.selected = 3;
             });
             queue_popover.add (queue);
 
             queue_button.valign = Gtk.Align.CENTER;
             queue_button.opacity = queue.playlist.has_tracks () ? 1 : 0.5;
-            queue_button.tooltip_text = _("Queue");
+            queue_button.tooltip_text = _ ("Queue");
 
             queue_button.clicked.connect (() => {
                 //WORKAROUND: Don't know how to avoid focus grabing of 'queue' object
@@ -805,6 +849,9 @@ namespace PlayMyMusic {
                 }
             }
             tracks_view.init_end ();
+            if (settings.sort_mode_album_view != 1) {
+                albums_view.do_sort (true);
+            }
         }
 
         private void reset_all_views () {
@@ -948,15 +995,46 @@ namespace PlayMyMusic {
             switch (settings.repeat_mode) {
             case RepeatMode.ALL :
                 repeat_button.set_image (icon_repeat_all);
+                repeat_button.tooltip_text = _ ("Repeat All");
                 break;
             case RepeatMode.ONE :
                 repeat_button.set_image (icon_repeat_one);
+                repeat_button.tooltip_text = _ ("Repeat One");
                 break;
             default :
                 repeat_button.set_image (icon_repeat_off);
+                repeat_button.tooltip_text = _ ("Repeat Off");
                 break;
             }
             repeat_button.show_all ();
+        }
+
+        private void set_shuffle_symbol () {
+            if (settings.shuffle_mode) {
+                shuffle_button.set_image (icon_shuffle_on);
+                shuffle_button.tooltip_text = _ ("Shuffle On");
+            } else {
+                shuffle_button.set_image (icon_shuffle_off);
+                shuffle_button.tooltip_text = _ ("Shuffle Off");
+            }
+            repeat_button.show_all ();
+        }
+
+        private void set_sort_mode_album_view () {
+            menu_sort_1.active = false;
+            menu_sort_2.active = false;
+            menu_sort_3.active = false;
+            switch (settings.sort_mode_album_view) {
+                case 2:
+                    menu_sort_2.active = true;
+                    break;
+                case 3:
+                    menu_sort_3.active = true;
+                    break;
+                default:
+                    menu_sort_1.active = true;
+                    break;
+            }
         }
 
         private void load_settings () {
@@ -987,7 +1065,11 @@ namespace PlayMyMusic {
                  || library_manager.player.play_mode == PlayMyMusic.Services.PlayMode.TRACKS
                  || library_manager.player.play_mode == PlayMyMusic.Services.PlayMode.PLAYLIST)) {
                 settings.last_track_id = library_manager.player.current_track.ID;
-                settings.track_progress = library_manager.player.get_position_progress ();
+                if (settings.remember_track_progress) {
+                    settings.track_progress = library_manager.player.get_position_progress ();
+                } else {
+                    settings.track_progress = 0;
+                }
                 switch (library_manager.player.play_mode) {
                     case PlayMyMusic.Services.PlayMode.ALBUM :
                         settings.last_album_id = current_track.album.ID;

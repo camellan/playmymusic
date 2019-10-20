@@ -68,10 +68,10 @@ namespace PlayMyMusic.Services {
                                 scan_local_files (target);
                             }
                         } else if (file_info.get_file_type () == FileType.DIRECTORY) {
-                            // Without usleep it crashes on smb:// protocol
-                            if (!directory.get_uri ().has_prefix ("file://")) {
+                            // Without usleep it crashes on smb:// protocol and mounted devices
+                            //if (!directory.get_uri ().has_prefix ("file://")) {
                                 Thread.usleep (1000000);
-                            }
+                            //}
                             scan_local_files (directory.get_uri () + "/" + file_info.get_name ());
                         } else {
                             string mime_type = file_info.get_content_type ();
@@ -88,6 +88,32 @@ namespace PlayMyMusic.Services {
                 directory.dispose ();
                 return null;
             });
+        }
+
+        public string get_file_uri (string path, string parent = "") {
+            string file_uri = path;
+            if (!path.has_prefix ("/")) {
+                file_uri = "%s/%s".printf(parent, path);
+                stdout.printf ("%s seems not an absolute path: adding parent (%s)\n", path, file_uri);
+            }
+
+            File path_file = File.new_for_path(file_uri);
+            try {
+                FileInfo path_file_info = path_file.query_info ("%s,%s".printf (FileAttribute.STANDARD_SYMLINK_TARGET, FileAttribute.STANDARD_IS_SYMLINK), FileQueryInfoFlags.NONE);
+                if (path_file_info.get_is_symlink ()) {
+                    stdout.printf ("%s is symlink: getting target...\n", file_uri);
+                    file_uri = path_file_info.get_symlink_target ();
+                    file_uri = (!file_uri.has_prefix ("/")) ? "%s/%s".printf(parent, file_uri) : file_uri;
+                    stdout.printf ("Target: %s\n", file_uri);
+                    path_file = File.new_for_path (file_uri);
+                }
+            } catch (Error error) {
+                // cannot parse file symlinks informations
+                // ignore it
+            }
+
+            stdout.printf ("Returning absolute path: %s\n", path_file.resolve_relative_path (".").get_path ());
+            return path_file.resolve_relative_path (".").get_path ();
         }
     }
 }
